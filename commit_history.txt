@@ -1,0 +1,25 @@
+commit 544427698e670e41d95cb73b970ae0304a372ccf
+Author: dilayduzler <dilayduzler@gmail.com>
+Date:   Mon Oct 7 16:24:54 2024 +0200
+
+    Ajout du fichier .gitignore pour ignorer les fichiers .DS_STORE
+
+commit fd47ea276582aec0e608242a39e4447638604133
+Author: dilayduzler <dilayduzler@gmail.com>
+Date:   Mon Oct 7 16:17:24 2024 +0200
+
+    Mise à jour du journal pour le travail du jour
+
+commit ea28d0463e50496c9c7894b849971006765d7e83
+Author: Dilay Düzler <149417553+dilayduzler@users.noreply.github.com>
+Date:   Mon Oct 7 16:02:57 2024 +0200
+
+    Create journal.md
+    
+    Ajout du journal de bord.
+
+commit fba786508f98d45c5de8642ce07860f89931b155
+Author: Dilay Düzler <149417553+dilayduzler@users.noreply.github.com>
+Date:   Mon Oct 7 15:54:23 2024 +0200
+
+    Initial commit
