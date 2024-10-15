@@ -1,5 +1,8 @@
 # Séance 3
 ## exercices git
+
+correction d’erreurs
+
 cette ligne doit rester apres correction
 
 ceci est une erreur
