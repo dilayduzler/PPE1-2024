@@ -1,3 +1,5 @@
 # Séance 3
 ## exercices git
+aaaaaaaaaa
+bbbbbbbbbbb
 
