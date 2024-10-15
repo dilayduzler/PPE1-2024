@@ -5,5 +5,8 @@ correction d’erreurs
 
 cette ligne doit rester apres correction
 
+
+Cette ligne sera mise de côté.
+
 ceci est une erreur
 une autre erreur
