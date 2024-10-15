@@ -1,6 +1,4 @@
 # Séance 3
 ## exercices git
-aaaaaaaaaa
-bbbbbbbbbbb
 cette ligne doit rester apres correction
 
