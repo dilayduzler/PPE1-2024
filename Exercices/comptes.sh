@@ -6,11 +6,9 @@ if [ "$1" != "Location" ]; then
 fi
 
 
-nb_2016=$(grep -c "Location" ann/2016*.ann | wc -l)
-echo "2016: $nb_2016"
+for annee in 2016 2017 2018;
+do
+	nb=$(grep -c "Location" ann/"$annee"*.ann | wc -l)
+	echo "$annee: $nb"
+done
 
-nb_2017=$(grep -c "Location" ann/2017*.ann | wc -l)
-echo "2017: $nb_2017"
-
-nb_2018=$(grep -c "Location" ann/2018*.ann | wc -l)
-echo "2018: $nb_2018"
