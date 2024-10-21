@@ -1,6 +1,11 @@
 #!/bin/bash
 
-# $1 = entite (varlık türü)
+# $1 = entite 
+
+if [ "$1" == "" ]; then
+  echo "Utilisation : $0 <type d'entité>"
+  exit 1
+fi
 
 compte16=$(grep -c "$1" ann/"2016"*.ann | wc -l)
 echo "2016: $compte16"
