@@ -25,3 +25,44 @@ Pendant ces exercices, la partie la plus difficile a été d'utiliser correcteme
 
 CODE DE LA DIAPOSITIVE: 
 Le code commence par un if qui vérifie qu'un seul argument est fourni, sinon il affiche un message à l'utilisateur. Ensuite, trois variables sont déclarées : la première contient l'argument utilisateur, et les deux autres sont initialisées à zéro pour compter. Ensuite, une boucle while lit chaque ligne et vérifie si elle correspond à un format d'URL valide, en incrémentant les compteurs OK ou NOK en conséquence. À la fin, le script affiche le nombre d'URLs valides et invalides.
+
+## Mini Projet
+
+Je n'ai pas bien compris comment réaliser cette activité, donc il se peut que j'aie fait une erreur. Tout d'abord, je n'ai pas compris si nous devions choisir un nouveau mot nous-mêmes ou utiliser les URL déjà disponibles sur le GitHub du cours. J'ai supposé que c'était la deuxième option, alors j'ai utilisé ces URL. Par conséquent, avant de commencer les exercices, j'ai téléchargé le dossier miniprojet sur mon ordinateur.
+
+Exercice 1 
+
+Q1-
+Nous utilisons la méthode cat pour afficher le contenu du fichier à l’écran. D’ailleurs, j’ai utilisé cela pour lire le fichier miniprojet.sh dans cette question. Ici, une boucle while est utilisée pour afficher l’URL à l’écran.
+J’ai recherché sur Internet ce que fait while read -r, et j’ai découvert que cela lit chaque ligne une par une. Donc, en lisant de cette manière, cela affiche chaque ligne séparément avec echo. De cette façon, même si le contenu affiché est identique, cela nous sera utile plus tard si nous voulons traiter les lignes individuellement ou accéder à une ligne spécifique. C’est pour cette raison que while read -r est utilisé à la place de cat.
+
+Q2-
+Avec ce code, nous souhaitons exécuter le fichier de notre choix plus tard, c'est pourquoi nous allons utiliser une variable au lieu d’écrire directement "url/fr.txt". Pour cela, nous pouvons remplacer ce chemin par $1. Ensuite, si nous voulons exécuter le fichier, nous pourrons taper la commande ./miniprojet.sh url/fr.txt dans le terminal.
+
+Q2.1-
+Pour cela, j'ai ajouté la variable au code ainsi qu'un if pour la validation.
+Q3-
+Pour cette question, nous voulons voir les URL ligne par ligne avec les numéros de ligne. Pour cela, j'ajoute une variable avant la boucle while pour stocker les numéros de ligne. Je la place dans l'echo afin de la voir d’abord. Ensuite, j'ajoute \t pour l'indentation, puis j'ajoute line. Après chaque ligne, il doit ajouter 1 à ma variable nb. Je place donc cette opération dans la boucle.
+Je pense avoir terminé, alors j'essaie d'exécuter le code, mais je reçois une erreur de syntaxe :
+./miniprojet.sh: line 3: unexpected EOF while looking for matching `]'
+./miniprojet.sh: line 14: syntax error: unexpected end of file
+Ensuite, je réalise que j'ai oublié de fermer les guillemets dans ma condition if, donc je corrige cela. Mais cette fois, il ne trouve pas urls.fr.txt. Au moins, je constate que ma validation fonctionne.
+Ensuite, je fournis le chemin absolu comme argument, et cette fois, le code fonctionne, mais j'obtiens l'erreur suivante :
+./miniprojet.sh: line 11: nb: command not found
+En cherchant, je découvre que pour écrire une addition, il faut utiliser (()). Cette fois, j'obtiens le résultat souhaité.
+
+
+Exercice 2 
+
+Q1- 
+On m'a demandé d'afficher le code HTTP. Je ne me souvenais plus comment faire cela, alors j’ai cherché sur Internet. Pour obtenir uniquement le code HTTP, on peut utiliser cette commande : curl -s -o /dev/null -w "%{http_code}". Je ne me souviens pas si on l'a vu en cours, mais j'ai utilisé cette méthode pour cet exercice. Le -o /dev/null ignore le contenu de la page, ce qui permet de récupérer uniquement l’information souhaitée avec -w "%{http_code}". Ensuite, j’ai ouvert nano, et j'ai ajouté cela dans une variable, puis j'ai ajouté l'affichage en tableau avec les numéros de ligne, dans la boucle while.
+Quand j'ai exécuté le code, j'ai reçu une erreur command not found. Après un moment, j'ai remarqué que j'avais accidentellement laissé un espace en trop, donc je l'ai supprimé, et ensuite ça a fonctionné.
+Q1.1-
+Je n'ai pas compris si on nous demandait de corriger les codes d’erreur. Dans cet exemple, j’ai les codes 301 et 404. Comme je n'ai pas bien compris la question, je vais simplement ajouter une validation pour afficher un message à l'utilisateur si le code n'est pas 200. Ensuite, j'ai écrit un if, mais j'ai encore fait une erreur : ./miniprojet.sh: line 12: [: missing \]’`. J'avais encore oublié un espace… c'est vraiment confus, pourquoi faut-il un espace ? Bon, cette fois, ça fonctionne.
+Q2-
+Pour cela, j'ai d'abord fait un curl -i sur une page aléatoire. L'encodage se trouve dans l'en-tête Content-Type sous charset, donc nous devons récupérer cette information.
+On peut obtenir les en-têtes avec curl -I, donc j'ai commencé par ça : curl -I "$line". Ensuite, il fallait récupérer l'en-tête Content-Type, alors j'ai ajouté ceci : curl -I "$line" | egrep -i "Content-Type".
+Je ne savais pas trop comment récupérer uniquement la partie charset, mais après quelques recherches, j'ai découvert qu'on pouvait utiliser awk.
+J'ai lancé le script, mais il a affiché plein de choses inutiles comme "time total", "time spent", etc. J'avais vu dans la question précédente que le flag -s supprimait les informations inutiles, donc je l'ai ajouté et ça a marché.
+Q3- 
+Ici, j'ai également utilisé le flag -s. J'ai utilisé wc -w pour compter les mots, puis j'ai stocké le résultat dans une variable.

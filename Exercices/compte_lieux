@@ -2,7 +2,7 @@
 
 # $1 = annee $2 = mois  $3 = lieux
 
-anne=#${1:-*}
+anne=${1:-*}
 mois=${2:-*}
 nb_places=${3:-10}
 
