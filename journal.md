@@ -66,3 +66,26 @@ Je ne savais pas trop comment récupérer uniquement la partie charset, mais apr
 J'ai lancé le script, mais il a affiché plein de choses inutiles comme "time total", "time spent", etc. J'avais vu dans la question précédente que le flag -s supprimait les informations inutiles, donc je l'ai ajouté et ça a marché.
 Q3- 
 Ici, j'ai également utilisé le flag -s. J'ai utilisé wc -w pour compter les mots, puis j'ai stocké le résultat dans une variable.
+
+## Mini Projet 3
+
+Au début, j’ai fait cet exercice en écrivant du HTML avec VS Code. Ensuite, en voyant les discussions sur le groupe Discord, j’ai remarqué que certains l’avaient fait avec un script Bash. J’ai donc tout recommencé. Comme je n’avais pas assisté au cours, je ne savais pas exactement ce qui était attendu, et il semble que je n’avais pas fait ce qu’on demandait au départ. Les consignes pourraient être plus détaillées.
+
+J’ai aussi rencontré une erreur liée à un élément que je n’avais pas réussi à supprimer précédemment, ce qui m’empêchait de générer le page. L’erreur était la suivante :
+Error: fatal: No url found for submodule path 'Exercices/ann' in .gitmodules
+
+J’ai demandé de l’aide à ChatGPT, et finalement, nous avons réussi à tout supprimer. Cela faisait des semaines que j’essayais de résoudre ce problème, et c’est enfin réglé.
+
+Voici le lien final du projet :
+https://dilayduzler.github.io/PPE1-2024/mini-projet-3/
+
+Ensuite, sur Discord, on disait que si on plaçait les fichiers dans un dossier sous PPE1-2024, il fallait inclure le chemin dans le lien. J’ai donc écrit le lien de cette manière :
+<a href="mini-projet-3/bonjour.html" …>
+Cependant, cela causait des problèmes, donc finalement je n’ai pas utilisé cette solution.
+
+
+
+
+
+
+
